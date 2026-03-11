@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <!-- Floating Chat Button -->
+    <div class="vhat-box" id="chatToggle">
+      <i class="fa-solid fa-comment-dots"></i>
+    </div>
+    <!-- CHAT BOX -->
+    <div class="chat-box-1" id="chatBox">
+      <div class="blue-box" id="blueBox"></div>
+      <div class="content">
+        <!-- HEADER -->
+        <div class="header-1">
+          <div class="cir" id="headerProfile">
+            <div class="cir-1">
+              <img src="https://i.pravatar.cc/40" />
+              <span class="status-dot"></span>
+            </div>
+            <div class="support">
+              <h5 id="ui-co">Chat Support</h5>
+              <span class="status">Online</span>
+            </div>
+          </div>
+          <button class="btn-1" id="closeChat">
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+        </div>
+        <!-- HOME SCREEN -->
+        <div class="home-screen" id="homeScreen">
+          <div class="txt-2">
+            <h5>Hi,</h5>
+            <p>How can I help you?</p>
+          </div>
+          <div class="form-1">
+            <div class="form-2">
+              <h5>Send us email?</h5>
+              <form>
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">
+                  <i class="fa-solid fa-location-arrow"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- CHAT SCREEN -->
+        <div class="chat-screen" id="chatScreen">
+          <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+              <div class="bubble">Hello 👋 How can we help you today?</div>
+              <span class="time">7:30 pm</span>
+            </div>
+          </div>
+          <!-- INPUT AREA -->
+          <div class="chat-input-area">
+            <form action="/chat" method="post">
+              <div class="input-box">
+                <textarea
+                  id="messageInput"
+                  placeholder="Enter your message"
+                ></textarea>
+                <button id="sendBtn" type="submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+            <div class="input-tools">
+              <div class="io-1">
+                <button id="fileBtn">
+                  <i class="fa-solid fa-paperclip"></i>
+                </button>
+                <button id="emojiBtn">
+                  <i class="fa-regular fa-face-smile"></i>
+                </button>
+              </div>
+              <span class="powered"> powered by <b>Nexgenbyte</b> </span>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="footer-2">
+          <button id="homeBtn"><i class="fa-solid fa-house"></i></button>
+          <button id="messageBtn"><i class="fa-solid fa-message"></i></button>
+        </div>
+      </div>
+    </div>
+    <input type="file" id="fileInput" hidden />
+    <div id="emojiPicker" class="emoji-picker">
+      😀 😃 😄 😁 😆 😅 😂 😊 😍 😎 🤔 👍 ❤️ 🎉 🙌
+    </div>
+    <script src="widget.js"></script>
+  </body>
+</html>
